@@ -1,4 +1,4 @@
-Zip an arbitrary number of iterables
+Zip an arbitrary number of iterables into `Vec`s
 
 Supports `#![no_std]`
 

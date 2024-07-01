@@ -1,6 +1,6 @@
 //! Zip an arbitrary number of iterables
 //!
-//! (Note: the term "iterable" is used to refer to any instances of types that implement `IntoIterator`)
+//! (Note: the term "iterable" is used to refer to any instances of types that implement [`IntoIterator`])
 
 #![no_std]
 
@@ -8,7 +8,7 @@ extern crate alloc;
 use alloc::boxed::Box;
 use alloc::vec::Vec;
 
-/// Iterator that zips an arbitrary number of iterables
+/// Iterator that zips an arbitrary number of iterables into [`Vec`]s
 ///
 /// Created by [manyzip], should not be used directly
 #[derive(Debug)]
@@ -25,7 +25,7 @@ impl<T: Iterator> Iterator for Manyzip<T> {
     }
 }
 
-/// Returns an iterator that zips all iterables provided
+/// Returns an iterator that zips all iterables provided into [`Vec`]s
 ///
 /// Yields `None` if any of the iterables yield `None`
 pub fn manyzip<T: IntoIterator>(iterators: T) -> Manyzip<<T::Item as IntoIterator>::IntoIter>
