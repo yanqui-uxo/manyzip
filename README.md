@@ -1,4 +1,4 @@
-Zip an arbitrary number of iterables together
+Zip an arbitrary number of iterables
 
 Supports `#![no_std]`
 
