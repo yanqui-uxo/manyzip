@@ -4,4 +4,4 @@ version = 3
 
 [[package]]
 name = "manyzip"
-version = "1.0.3"
+version = "1.0.4"

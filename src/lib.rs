@@ -28,11 +28,11 @@ impl<T: Iterator> Iterator for Manyzip<T> {
 /// Returns an iterator that zips all iterables provided into [`Vec`]s
 ///
 /// Yields `None` if any of the iterables yield `None`
-pub fn manyzip<T: IntoIterator>(iterators: T) -> Manyzip<<T::Item as IntoIterator>::IntoIter>
+pub fn manyzip<T: IntoIterator>(iterables: T) -> Manyzip<<T::Item as IntoIterator>::IntoIter>
 where
     T::Item: IntoIterator,
 {
-    Manyzip(iterators.into_iter().map(IntoIterator::into_iter).collect())
+    Manyzip(iterables.into_iter().map(IntoIterator::into_iter).collect())
 }
 
 #[cfg(test)]
